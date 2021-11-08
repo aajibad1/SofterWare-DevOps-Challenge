@@ -110,16 +110,10 @@ variable "tg_protocol" {
 
 variable "listener_port" {
   description = "Enter the port for the application load balancer target group"
-  default     = "443"
+  default     = "8000"
 }
 
 variable "listener_protocol" {
   description = "Enter the protocol for the application load balancer target group"
-  default     = "HTTPs"
-}
-
-# Certificate ARN for HTTPS
-variable "certificate_arn_user" {
-  description = "Enter the certificate ARN for HTTPS"
-  default     = "#########"
+  default     = "HTTP"
 }

@@ -360,6 +360,12 @@ resource "aws_lb_listener" "webserver-lb" {
   }
 }
 
+resource "aws_lb_target_group_attachment" "web-ser" {
+  target_group_arn = aws_lb_target_group.alb_group.arn
+  target_id        = aws_instance.test.id
+  port             = 80
+}
+
 #Creating listener rules
 
 resource "aws_lb_listener_rule" "allow_all" {
